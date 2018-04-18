@@ -1,19 +1,19 @@
 pipeline {
     agent any 
     stages {
-        stage('Stage 1') {
+        stage('打包') {
             steps {
                 echo 'Hello world! This is the stage1 !!!' 
             }
         }
         
-        stage('Stage 2') {
+        stage('测试') {
             steps {
                 echo 'Hello world! This is the stage2 !!!' 
             }
         }
 
-        stage('Stage 3') {
+        stage('部署') {
             steps {
                 echo 'Hello world! This is the stage3 !!!' 
             }
