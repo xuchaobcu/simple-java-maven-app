@@ -12,20 +12,22 @@ import static org.junit.Assert.*;
  */
 public class AppTest
 {
-
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    //comment by jack
+    //private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before
     public void setUpStreams() {
-        System.setOut(new PrintStream(outContent));
+        //comment by jack
+        //System.setOut(new PrintStream(outContent));
+        System.out.println("Test case in the Before Step!")
     }
 
     @Test
     public void testAppConstructor() {
         try {
             new App();
-             //System.setOut('The first testcase is succeed!');
-            System.out.println("The first testcase is succeed!");
+            //add by jack
+            System.out.println("Test case in the First Step!")
         } catch (Exception e) {
             fail("Construction failed.");
         }
@@ -37,8 +39,8 @@ public class AppTest
         App.main(null);
         try {
             assertEquals("Hello World!" + System.getProperty("line.separator"), outContent.toString());
-            //System.setOut('The second testcase is succeed!');
-            System.out.println("The second testcase is succeed!");
+            //add by jack
+            System.out.println("Test case in the Second Step!")
         } catch (AssertionError e) {
             fail("\"message\" is not \"Hello World!\"");
         }
