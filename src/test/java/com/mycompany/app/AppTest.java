@@ -12,20 +12,17 @@ import static org.junit.Assert.*;
  */
 public class AppTest
 {
-    //private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before
     public void setUpStreams() {
-        //System.setOut(new PrintStream(outContent));
-        private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.out.println("===  Befoe   ===");
+        System.setOut(new PrintStream(outContent));
     }
 
     @Test
     public void testAppConstructor() {
         try {
             new App();
-            System.out.println("===  Test Case 01 ===");
         } catch (Exception e) {
             fail("Construction failed.");
         }
@@ -37,7 +34,6 @@ public class AppTest
         App.main(null);
         try {
             assertEquals("Hello Devops!" + System.getProperty("line.separator"), outContent.toString());
-            System.out.println("===  Test Case 02 ===");
         } catch (AssertionError e) {
             fail("\"message\" is not \"Hello Devops!\"");
         }
@@ -45,8 +41,7 @@ public class AppTest
 
     @After
     public void cleanUpStreams() {
-        //System.setOut(null); 
-        System.out.println("===  After ===");
+        System.setOut(null); 
     }
 
 }
