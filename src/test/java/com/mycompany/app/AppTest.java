@@ -12,12 +12,13 @@ import static org.junit.Assert.*;
  */
 public class AppTest
 {
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    //private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before
     public void setUpStreams() {
-        System.setOut(new PrintStream(outContent));
-        //System.out.println("===  Befoe   ===");
+        //System.setOut(new PrintStream(outContent));
+        private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.out.println("===  Befoe   ===");
     }
 
     @Test
@@ -44,8 +45,8 @@ public class AppTest
 
     @After
     public void cleanUpStreams() {
-        System.setOut(null); 
-        //System.out.println("===  After ===");
+        //System.setOut(null); 
+        System.out.println("===  After ===");
     }
 
 }
