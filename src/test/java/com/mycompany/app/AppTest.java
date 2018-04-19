@@ -13,13 +13,13 @@ import static org.junit.Assert.*;
 public class AppTest
 {
     //comment by jack
-    //private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before
     public void setUpStreams() {
         //comment by jack
         //System.setOut(new PrintStream(outContent));
-        System.out.println("Test case in the Before Step!");
+        System.out.println(new PrintStream(outContent));
     }
 
     @Test
@@ -48,7 +48,8 @@ public class AppTest
 
     @After
     public void cleanUpStreams() {
-        System.setOut(null);
+        //System.setOut(null);
+        System.out.println(null);  
     }
 
 }
