@@ -16,13 +16,15 @@ public class AppTest
 
     @Before
     public void setUpStreams() {
-        System.setOut(new PrintStream(outContent));
+        //System.setOut(new PrintStream(outContent));
+        System.out.println("===  Befoe   ===");
     }
 
     @Test
     public void testAppConstructor() {
         try {
             new App();
+            System.out.println("===  Test Case 01 ===");
         } catch (Exception e) {
             fail("Construction failed.");
         }
@@ -34,6 +36,7 @@ public class AppTest
         App.main(null);
         try {
             assertEquals("Hello Devops!" + System.getProperty("line.separator"), outContent.toString());
+            System.out.println("===  Test Case 02 ===");
         } catch (AssertionError e) {
             fail("\"message\" is not \"Hello Devops!\"");
         }
@@ -41,7 +44,8 @@ public class AppTest
 
     @After
     public void cleanUpStreams() {
-        System.setOut(null); 
+        //System.setOut(null); 
+        System.out.println("===  After ===");
     }
 
 }
