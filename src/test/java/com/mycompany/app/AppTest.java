@@ -24,6 +24,7 @@ public class AppTest
     public void testAppConstructor() {
         try {
             new App();
+            System.out.println('The first testcase is succeed!');
         } catch (Exception e) {
             fail("Construction failed.");
         }
@@ -35,6 +36,7 @@ public class AppTest
         App.main(null);
         try {
             assertEquals("Hello World!" + System.getProperty("line.separator"), outContent.toString());
+            System.out.println('The second testcase is succeed!');
         } catch (AssertionError e) {
             fail("\"message\" is not \"Hello World!\"");
         }
