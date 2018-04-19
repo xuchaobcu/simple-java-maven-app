@@ -16,8 +16,8 @@ public class AppTest
 
     @Before
     public void setUpStreams() {
-        //System.setOut(new PrintStream(outContent));
-        System.out.println("===  Befoe   ===");
+        System.setOut(new PrintStream(outContent));
+        //System.out.println("===  Befoe   ===");
     }
 
     @Test
@@ -44,8 +44,8 @@ public class AppTest
 
     @After
     public void cleanUpStreams() {
-        //System.setOut(null); 
-        System.out.println("===  After ===");
+        System.setOut(null); 
+        //System.out.println("===  After ===");
     }
 
 }
