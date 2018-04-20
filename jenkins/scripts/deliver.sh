@@ -29,4 +29,4 @@ java -jar target/${NAME}-${VERSION}.jar
 set +x
 echo 'run the selenium script'
 set -x
-python ./jenkins/scripts/seleniumDemp.py
+#python ./jenkins/scripts/seleniumDemp.py
