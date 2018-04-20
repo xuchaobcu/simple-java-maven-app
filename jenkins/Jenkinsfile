@@ -21,11 +21,11 @@ pipeline {
                 }
             }
         }
-        stage('验收测试') {
-            steps {
-                sh 'python ./jenkins/scripts/seleniumDemp.py'
-            }
-        }
+        //stage('验收测试') {
+        //    steps {
+        //        sh 'python ./jenkins/scripts/seleniumDemp.py'
+        //    }
+        //}
         stage('部署') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
