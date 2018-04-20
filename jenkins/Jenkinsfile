@@ -5,12 +5,12 @@ pipeline {
             args '-v /home/jack/jenkins-data:/var/jenkin_home'
         }
     }
-    agent {    
-        docker {
-            image 'cdrx/pyinstaller-linux:python2'
-            args '-v /home/jack/jenkins-data:/var/jenkin_home'
-        }
-    }
+    //agent {    
+    //    docker {
+    //        image 'cdrx/pyinstaller-linux:python2'
+    //        args '-v /home/jack/jenkins-data:/var/jenkin_home'
+    //    }
+    //}
     stages {
         stage('打包') {
             steps {
