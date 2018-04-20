@@ -4,6 +4,8 @@ pipeline {
             image 'maven:3-alpine'
             args '-v /home/jack/jenkins-data:/var/jenkin_home'
         }
+    }
+    agent {    
         docker {
             image 'cdrx/pyinstaller-linux:python2'
             args '-v /home/jack/jenkins-data:/var/jenkin_home'
