@@ -3,6 +3,7 @@ pipeline {
         docker {
             image 'maven:3-alpine'
             args '-v /home/jack/jenkins-data:/var/jenkin_home'
+            image 'python:2-alpine'
         }
     }
     stages {
