@@ -4,6 +4,10 @@ pipeline {
             image 'maven:3-alpine'
             args '-v /home/jack/jenkins-data:/var/jenkin_home'
         }
+        docker {
+            image 'cdrx/pyinstaller-linux:python2'
+            args '-v /home/jack/jenkins-data:/var/jenkin_home'
+        }
     }
     stages {
         stage('打包') {
@@ -22,14 +26,6 @@ pipeline {
             }
         }
         stage('验收测试') {
-        //    steps {
-        //        sh 'python ./jenkins/scripts/seleniumDemp.py'
-        //    }
-            agent {
-                docker {
-                    image 'cdrx/pyinstaller-linux:python2'
-                }
-            }
             steps {
                 sh 'python ./jenkins/scripts/seleniumDemp.py'
             }
